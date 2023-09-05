@@ -1,5 +1,5 @@
-const marvelHeros = {
-    render: () => {
+
+function showCharacters() {
         const apiUrl = 'https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=8b952c8b38e25f1426591a1dbb023326&hash=72134039e0d32f9b5eb290473134bb6b';
         const container = document.querySelector('.container');
         let contentHTML = '';
@@ -14,6 +14,7 @@ const marvelHeros = {
                     contentHTML += `
                     <div id="marvel-cards">
                         <h2 class="heroName">${hero.name}</h2>
+                        <p class='cardInfo'>click en la imagen para ver <br> comics donde aparece el personaje</p>
                         <a href="${urlWiki}" target="_blank">
                             <img class="heroImg" src="${hero.thumbnail.path}.${hero.thumbnail.extension}" alt="${hero.name}">
                         </a>
@@ -22,12 +23,6 @@ const marvelHeros = {
                 container.innerHTML = contentHTML;
             })
             .catch(error => console.error('Error:', error));
-    },
-};
-marvelHeros.render();
-
-const loadMore = document.getElementById('loadBtn');
-
-loadMore.addEventListener("click", ()=> {
-    alert('Funcionalidad en desarrollo')
-});
+    }
+    
+    showCharacters();
