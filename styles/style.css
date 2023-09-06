@@ -89,18 +89,20 @@ body {
 
 #loadMore {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 350px;
     margin-top: 80px;
     margin-bottom: 30px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    width: 50%;
     font-family: 'heros';
     font-size: 40px;
     padding: 15x;
     cursor: pointer;
+    background-color: red;
 }
 
 #loadMore:hover {
-    background-color: red;
-    color: black;
+    background-color: white;
+    color: red;
 }
