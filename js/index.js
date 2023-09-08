@@ -47,7 +47,7 @@ function showCharacters() {
                     contentHTML += `
                     <div id="marvel-cards">
                         <h2 class="heroName">${hero.name}</h2>
-                        <p class='cardInfo'>Click en la imagen para ver <br> comics donde aparece el personaje</p>
+                        <p class='cardInfo'> ${hero.description ? hero.description : 'No hay descripción disponible'}</p>
                         <a href="${urlWiki}" target="_blank">
                             <img class="heroImg" src="${hero.thumbnail.path}.${hero.thumbnail.extension}" alt="${hero.name}">
                         </a>
