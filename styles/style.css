@@ -1,5 +1,4 @@
 body {
-    background-color: #000000;
     font-family: 'heros';
     background-image: url(../img/marvel_bg.jpg);
     background-repeat: no-repeat;
@@ -7,25 +6,18 @@ body {
     margin: 0;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 70px 50px;
-    justify-items: center;
-}
-
-/*Agrego fuente personalizada*/
-
 @font-face {
     font-family: 'heros';
     src: url('../fonts/heroesassemble2.ttf') format('truetype');
 }
 
-.topText {
+.topText, #navbar {
     backdrop-filter: blur(3px) saturate(200%);
     -webkit-backdrop-filter: blur(3px) saturate(200%);
     background-color: rgba(26, 28, 28, 0.83);
 }
+
+
 /* Estilos para el título */
 #title {
     padding-top: 10px;
@@ -41,50 +33,6 @@ body {
     font-size: 25px;
     color: #e62429;
     padding: 20px;
-}
-
-/* Estilos para las tarjetas de Marvel */
-
-.cardInfo {
-    font-size: 15px;
-    color: grey
-}
-
-#marvel-cards {
-    background-color: #000000;
-    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff0000' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-    ;
-    border: 4px solid #e62429;
-    padding: 15px 5px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0px 4px 6px black;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
-#marvel-cards:hover {
-    transform: scale(1.1);
-}
-
-.heroName {
-    font-size: 25px;
-    margin-bottom: 10px;
-    color: #e62429;
-}
-
-.heroImg {
-    max-width: 50%;
-    height: auto;
-    flex-grow: 1;
-    transition: transform 0.3s ease-in-out;
-}
-
-#marvel-cards:hover .heroImg {
-    transform: scale(1.1);
 }
 
 #loadMore {
