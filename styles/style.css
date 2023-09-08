@@ -3,6 +3,7 @@ body {
     background-image: url(../img/marvel_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     margin: 0;
 }
 
@@ -17,6 +18,16 @@ body {
     background-color: rgba(26, 28, 28, 0.83);
 }
 
+#marvel-cards {
+    transition: transform 0.3s;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px black;
+}
+
+#marvel-cards:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 16px black;
+}
 
 /* Estilos para el título */
 #title {
